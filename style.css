@@ -1,0 +1,227 @@
+/* Reset & Variáveis */
+:root {
+    --bg-dark: #0a140f;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --primary: #4ade80;
+    --primary-hover: #22c55e;
+    --accent: #fbbf24;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-dark);
+}
+
+body {
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* Ajuste de Posição do Widget do VLibras */
+[vw] {
+    position: fixed;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+    z-index: 99999 !important;
+}
+
+/* Efeito de Luz de Fundo */
+.background-glow {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 60vw;
+    height: 60vh;
+    background: radial-gradient(circle, rgba(74, 222, 128, 0.08) 0%, rgba(0,0,0,0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Header Glassmorphism */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(10, 20, 15, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--card-border);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+header .logo span { color: var(--primary); }
+
+header nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+header nav a:hover { color: #fff; }
+
+.btn-nav {
+    border: 1px solid var(--primary);
+    padding: 8px 20px;
+    border-radius: 8px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-nav:hover {
+    background: var(--primary);
+    color: var(--bg-dark);
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    padding-top: 100px;
+    gap: 40px;
+}
+
+.hero-text { max-width: 600px; }
+
+.badge {
+    background: rgba(74, 222, 128, 0.1);
+    color: var(--primary);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+    border: 1px solid rgba(74, 222, 128, 0.2);
+}
+
+.hero-text h1 {
+    font-size: 4.2rem;
+    line-height: 1.1;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.hero-text h1 span {
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.hero-actions { display: flex; gap: 20px; }
+
+.btn-primary, .btn-secondary {
+    padding: 16px 32px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--bg-dark);
+}
+
+.btn-primary:hover { background: var(--primary-hover); transform: translateY(-2px); }
+
+.btn-secondary {
+    border: 1px solid var(--card-border);
+    color: #fff;
+    background: rgba(255,255,255,0.02);
+}
+
+.btn-secondary:hover { background: rgba(255,255,255,0.08); }
+
+#canvas-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Seção de Métricas */
+.metrics-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 60px 8%;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.01) 100%);
+}
+
+.metric-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+}
+
+.metric-card h2 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #fff, var(--text-muted));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.metric-card p { color: var(--primary); font-weight: 600; }
+
+/* Características Grid */
+.features-section { padding: 100px 8%; }
+
+.section-header { text-align: center; margin-bottom: 60px; }
+.section-header h2 { font-size: 2.8rem; color: #fff; margin-bottom: 15px; }
+.section-header p { color: var(--text-muted); font-size: 1.1rem; }
+
+.grid-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.f-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 40px;
+    transition:

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroForte & Sustentável | O Futuro do Campo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+</head>
+<body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <div class="background-glow"></div>
+
+    <header>
+        <a href="#" class="logo">Agro<span>Forte</span></a>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#metricas">Impacto</a>
+            <a href="#ecossistema">Ecossistema</a>
+        </nav>
+        <a href="#contato" class="btn-nav">Fale Conosco</a>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="hero-text">
+                <span class="badge">Sustentabilidade Avançada</span>
+                <h1>O Futuro da Produção é o <span>Equilíbrio</span></h1>
+                <p>Unimos bioengenharia, inteligência artificial e respeito absoluto à terra para criar o ciclo agrícola mais eficiente e limpo da história.</p>
+                <div class="hero-actions">
+                    <a href="#ecossistema" class="btn-primary">Explorar Soluções</a>
+                    <a href="#metricas" class="btn-secondary">Ver Dados</a>
+                </div>
+            </div>
+            <div id="canvas-wrapper"></div>
+        </section>
+
+        <section id="metricas" class="metrics-section">
+            <div class="metric-card">
+                <h2>+35%</h2>
+                <p>De Eficiência Hídrica</p>
+            </div>
+            <div class="metric-card">
+                <h2>Zero</h2>
+                <p>Desmatamento</p>
+            </div>
+            <div class="metric-card">
+                <h2>Carbono</h2>
+                <p>Neutro Certificado</p>
+            </div>
+        </section>
+
+        <section id="ecossistema" class="features-section">
+            <div class="section-header">
+                <h2>Engenharia Sustentável</h2>
+                <p>Como equilibramos a alta performance produtiva com a saúde do planeta.</p>
+            </div>
+            <div class="grid-features">
+                <div class="f-card">
+                    <div class="icon">🌱</div>
+                    <h3>Bioinsumos</h3>
+                    <p>Substituição de defensivos químicos por soluções biológicas que protegem a lavoura e preservam o solo vivo.</p>
+                </div>
+                <div class="f-card">
+                    <div class="icon">🛰️</div>
+                    <h3>Monitoramento IoT</h3>
+                    <p>Sensores em tempo real e satélites que evitam o desperdício de água e insumos, aplicando apenas o necessário.</p>
+                </div>
+                <div class="f-card">
+                    <div class="icon">🔄</div>
+                    <h3>Manejo Regenerativo</h3>
+                    <p>Sistemas integrados de lavoura-pecuária-floresta que recuperam biomas enquanto geram valor.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AgroForte. Todos os direitos reservados. Alinhando tecnologia à natureza.</p>
+    </footer>
+
+    <script src="sketch.js"></script>
+</body>
+</html>
